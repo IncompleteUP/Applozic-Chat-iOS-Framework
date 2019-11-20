@@ -211,8 +211,8 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateVOIPMsg)
                                                  name:@"UPDATE_VOIP_MSG" object:nil];
 
-    [self.attachmentOutlet setTintColor:[ALApplozicSettings getAttachmentIconColour]];
-    [self.sendButton setTintColor:[ALApplozicSettings getSendIconColour]];
+    [self.attachmentOutlet setBackgroundColor:[ALApplozicSettings getAttachmentIconColour]];
+    [self.sendButton setBackgroundColor:[ALApplozicSettings getSendIconColour]];
     self.alphabetiColorCodesDictionary = [ALApplozicSettings getUserIconFirstNameColorCodes];
 
 }
@@ -1684,7 +1684,7 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
 //        UIImage* micImage = [ALUtilityClass getImageFromFramworkBundle:@"mic_icon.png"];
 //        [self.sendButton setImage:micImage forState:UIControlStateNormal];
         [self.sendButton setTitle:@"send" forState:UIControlStateNormal];
-        [self.sendButton setTintColor:[ALApplozicSettings getSendIconColour]];
+        [self.sendButton setBackgroundColor:[ALApplozicSettings getSendIconColour]];
         
         isMicButtonVisible = YES;
     }
@@ -1717,7 +1717,7 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
 //    UIImage* sendImage = [ALUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
 //    [self.sendButton setImage:sendImage forState:UIControlStateNormal];
     [self.sendButton setTitle:@"send" forState:UIControlStateNormal];
-    [self.sendButton setTintColor:[ALApplozicSettings getSendIconColour]];
+    [self.sendButton setBackgroundColor:[ALApplozicSettings getSendIconColour]];
     isMicButtonVisible = NO;
 }
 

@@ -69,7 +69,7 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
     self.placeHolderColor = [ALApplozicSettings getPlaceHolderColor];
     self.sendMessageTextView.textColor = self.placeHolderColor;
     self.sendMessageTextView.backgroundColor = [ALApplozicSettings getMsgTextViewBGColor];
-    
+    self.sendMessageTextView.textContainerInset = UIEdgeInsetsMake(0, 8, 0, 8);
     
     if ([ALUtilityClass parsedALChatCostomizationPlistForKey:APPLOZIC_CHAT_BACKGROUND_COLOR])
         self.mTableView.backgroundColor = (UIColor *)[ALUtilityClass parsedALChatCostomizationPlistForKey:APPLOZIC_CHAT_BACKGROUND_COLOR];
@@ -326,7 +326,7 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
 -(void)sendButtonUI
 {
     [self.sendButton setBackgroundColor:[ALApplozicSettings getColorForSendButton]];
-    self.sendButton.layer.cornerRadius = self.sendButton.frame.size.height/2.0;
+    self.sendButton.layer.cornerRadius = 2.0;
     self.sendButton.layer.masksToBounds = YES;
     
     [self.typingMessageView sendSubviewToBack:self.typeMsgBG];
