@@ -76,8 +76,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="103" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9sE-W8-i33">
-                                                    <rect key="frame" x="26" y="16" width="55" height="54.5"/>
+                                                    <rect key="frame" x="26" y="16" width="55" height="55"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55" id="PH5-eZ-LpI"/>
+                                                        <constraint firstAttribute="width" constant="55" id="VtX-Te-ECU"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Muserlabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4M-aZ-RgP">
                                                     <rect key="frame" x="102" y="18" width="167" height="21"/>
@@ -98,13 +102,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_action_camera" translatesAutoresizingMaskIntoConstraints="NO" id="ng6-Us-xRU">
-                                                    <rect key="frame" x="100" y="41" width="25" height="25"/>
+                                                    <rect key="frame" x="100" y="41" width="25" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="K9t-DK-prk"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Label " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFm-Yv-yQF">
-                                                    <rect key="frame" x="132" y="43" width="118" height="17"/>
+                                                    <rect key="frame" x="132" y="43" width="118" height="56"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="MT4-6C-INF"/>
                                                     </constraints>
@@ -113,7 +117,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8um-DV-I1M" userLabel="mCount Label">
-                                                    <rect key="frame" x="328" y="41" width="20" height="20"/>
+                                                    <rect key="frame" x="328" y="41" width="20" height="59"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" notEnabled="YES"/>
                                                     </accessibility>
@@ -125,19 +129,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQ8-OW-duW">
-                                                    <rect key="frame" x="36" y="26" width="38" height="29.5"/>
+                                                    <rect key="frame" x="36" y="26" width="38" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="MMessageLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-kK-XjJ">
-                                                    <rect key="frame" x="102" y="43" width="118" height="16.5"/>
+                                                    <rect key="frame" x="102" y="43" width="118" height="55.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online_show" translatesAutoresizingMaskIntoConstraints="NO" id="n4n-9f-27k">
-                                                    <rect key="frame" x="63" y="53" width="15" height="14.5"/>
+                                                    <rect key="frame" x="63" y="53" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="un8-r7-tg9"/>
                                                     </constraints>
