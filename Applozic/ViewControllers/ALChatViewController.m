@@ -254,7 +254,8 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
     // In iOS 11, TableView by default starts estimating the row height. This setting will disable that.
     self.mTableView.estimatedRowHeight = 0;
 
-    [self.label setHidden:NO];
+//    [self.label setHidden:NO];
+    [self.label setHidden:YES];
     self.label.alpha = 1;
     [self.loadEarlierAction setHidden:YES];
     self.showloadEarlierAction = TRUE;
@@ -497,6 +498,7 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UPDATE_USER_FREEZE_CHANNEL_ADD_REMOVING" object:nil];
 
     [self.sendMessageTextView resignFirstResponder];
+//    [self.label setHidden:YES];
     [self.label setHidden:YES];
     [[ALMediaPlayer sharedInstance] stopPlaying];
 
@@ -867,7 +869,8 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
     ALContact *contact = [dbservice loadContactByKey:@"userId" value:self.contactIds];
     self.isUserBlocked = contact.block;
     self.isUserBlockedBy = contact.blockBy;
-    [self.label setHidden:NO];
+//    [self.label setHidden:NO];
+    [self.label setHidden:YES];
 
     ALSLog(ALLoggerSeverityInfo, @"USER_STATE BLOCKED : %i AND BLOCKED BY : %i", contact.block, contact.blockBy);
     ALSLog(ALLoggerSeverityInfo, @"USER : %@", contact.userId);
@@ -882,7 +885,8 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
     ALContactService *cnService = [[ALContactService alloc] init];
     BOOL isUserDeleted = [cnService isUserDeleted:self.contactIds];
     [self freezeView:isUserDeleted];
-    [self.label setHidden:isUserDeleted];
+//    [self.label setHidden:isUserDeleted];
+    [self.label setHidden:YES];
     if (isUserDeleted)
     {
         [ALNotificationView showLocalNotification:[ALApplozicSettings getUserDeletedText]];
@@ -929,7 +933,8 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
                                       {
 
                                           self.isUserBlocked = NO;
-                                          [self.label setHidden:self.isUserBlocked];
+//                                          [self.label setHidden:self.isUserBlocked];
+                                          [self.label setHidden:YES];
 
                                           NSString * unblokInfo = NSLocalizedStringWithDefaultValue(@"blockedSusccessFullyInfo", [ALApplozicSettings getLocalizableName],[NSBundle mainBundle], @"%@ is unblocked successfully", @"");
 
@@ -2923,7 +2928,8 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
                 {
 
                     self.isUserBlocked = YES;
-                    [self.label setHidden:self.isUserBlocked];
+//                    [self.label setHidden:self.isUserBlocked];
+                    [self.label setHidden:YES];
 
                     NSString *blockInfo = NSLocalizedStringWithDefaultValue(@"blockedSuccessfullyText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"%@ is blocked successfully", @"");
 
@@ -4126,7 +4132,8 @@ style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         self.alContact = [contactService loadContactByKey:@"userId" value:userDetail.userId];
         BOOL isUserDeleted = self.alContact.deletedAtTime ? YES : NO;
         [self freezeView:isUserDeleted];
-        [self.label setHidden:isUserDeleted];
+//        [self.label setHidden:isUserDeleted];
+        [self.label setHidden:YES];
         [titleLabelButton setTitle:[self.alContact getDisplayName] forState:UIControlStateNormal];
         [self enableOrDisableChat:self.alContact.isChatDisabled];
     }
@@ -4167,7 +4174,8 @@ style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         {
             typingText = [NSString stringWithFormat:@"%@", NSLocalizedStringWithDefaultValue(@"userTyping", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle],@"is typing...", @"")];
         }
-        [self.label setHidden:NO];
+//        [self.label setHidden:NO];
+        [self.label setHidden:YES];
         [self.label setText:typingText];
     }
     else
