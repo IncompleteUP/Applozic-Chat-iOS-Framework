@@ -2889,69 +2889,69 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
             [self openCamera];
         }]];
     }
-    if(![ALApplozicSettings isLocationOptionHidden]){
-        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"currentLocationOption", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Current location", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//    if(![ALApplozicSettings isLocationOptionHidden]){
+//        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"currentLocationOption", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Current location", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//
+//            [self openLocationView];
+//        }]];
+//    }
+//
+//    if(![ALApplozicSettings isSendAudioOptionHidden]){
+//        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"sendAudioOption", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Send Audio", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//
+//            [self openAudioMic];
+//        }]];
+//    }
+//
+//    if(![ALApplozicSettings isSendVideoOptionHidden]){
+//        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"sendVideoOption", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle],  @"Send Video", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//
+//            [self openVideoCamera];
+//        }]];
+//    }
+//
+//    if(![ALApplozicSettings isDocumentOptionHidden]){
+//        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"DocumentText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle],  @"Document", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//            ALDocumentPickerHandler *documentPickerHandler = [[ALDocumentPickerHandler alloc]init];
+//            [documentPickerHandler showDocumentPickerViewController:self];
+//        }]];
+//    }
 
-            [self openLocationView];
-        }]];
-    }
-
-    if(![ALApplozicSettings isSendAudioOptionHidden]){
-        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"sendAudioOption", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Send Audio", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-
-            [self openAudioMic];
-        }]];
-    }
-
-    if(![ALApplozicSettings isSendVideoOptionHidden]){
-        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"sendVideoOption", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle],  @"Send Video", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-
-            [self openVideoCamera];
-        }]];
-    }
-
-    if(![ALApplozicSettings isDocumentOptionHidden]){
-        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"DocumentText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle],  @"Document", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            ALDocumentPickerHandler *documentPickerHandler = [[ALDocumentPickerHandler alloc]init];
-            [documentPickerHandler showDocumentPickerViewController:self];
-        }]];
-    }
-
-    if(((!self.channelKey && !self.conversationId) || (self.alChannel.type == GROUP_OF_TWO)) && ![ALApplozicSettings isBlockUserOptionHidden])
-    {
-        [theController addAction:[UIAlertAction actionWithTitle:NSLocalizedStringWithDefaultValue(@"blockUserOption", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"BLOCK USER", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-
-            if(![ALDataNetworkConnection checkDataNetworkAvailable])
-            {
-                [self showNoDataNotification];
-                return;
-            }
-
-            ALUserService *userService = [ALUserService new];
-            [userService blockUser:self.contactIds withCompletionHandler:^(NSError *error, BOOL userBlock) {
-
-                if(userBlock)
-                {
-
-                    self.isUserBlocked = YES;
-//                    [self.label setHidden:self.isUserBlocked];
-                    [self.label setHidden:YES];
-
-                    NSString *blockInfo = NSLocalizedStringWithDefaultValue(@"blockedSuccessfullyText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"%@ is blocked successfully", @"");
-
-                    NSString * alertText = [NSString stringWithFormat:blockInfo,[self.alContact getDisplayName]];
-
-                    [ALUtilityClass showAlertMessage:alertText andTitle:NSLocalizedStringWithDefaultValue(@"userBlock", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"USER BLOCK", @"")  ];
-                }
-            }];
-        }]];
-    }
-    if(![ALApplozicSettings isShareContactOptionHidden]){
-        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"shareContact", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Share Contact", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-
-            [self openContactsView];
-        }]];
-    }
+//    if(((!self.channelKey && !self.conversationId) || (self.alChannel.type == GROUP_OF_TWO)) && ![ALApplozicSettings isBlockUserOptionHidden])
+//    {
+//        [theController addAction:[UIAlertAction actionWithTitle:NSLocalizedStringWithDefaultValue(@"blockUserOption", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"BLOCK USER", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//
+//            if(![ALDataNetworkConnection checkDataNetworkAvailable])
+//            {
+//                [self showNoDataNotification];
+//                return;
+//            }
+//
+//            ALUserService *userService = [ALUserService new];
+//            [userService blockUser:self.contactIds withCompletionHandler:^(NSError *error, BOOL userBlock) {
+//
+//                if(userBlock)
+//                {
+//
+//                    self.isUserBlocked = YES;
+////                    [self.label setHidden:self.isUserBlocked];
+//                    [self.label setHidden:YES];
+//
+//                    NSString *blockInfo = NSLocalizedStringWithDefaultValue(@"blockedSuccessfullyText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"%@ is blocked successfully", @"");
+//
+//                    NSString * alertText = [NSString stringWithFormat:blockInfo,[self.alContact getDisplayName]];
+//
+//                    [ALUtilityClass showAlertMessage:alertText andTitle:NSLocalizedStringWithDefaultValue(@"userBlock", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"USER BLOCK", @"")  ];
+//                }
+//            }];
+//        }]];
+//    }
+//    if(![ALApplozicSettings isShareContactOptionHidden]){
+//        [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"shareContact", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Share Contact", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//
+//            [self openContactsView];
+//        }]];
+//    }
 
 
 
@@ -2981,30 +2981,30 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
         }]];
     }
 
-    if((self.channelKey ||  self.contactIds) && [ALApplozicSettings isDeleteConversationOptionEnabled]){
+//    if((self.channelKey ||  self.contactIds) && [ALApplozicSettings isDeleteConversationOptionEnabled]){
+//
+//        [theController addAction:[UIAlertAction actionWithTitle:NSLocalizedStringWithDefaultValue(@"deleteConversation", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Delete Conversation" , @"")
+//                                                          style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//                                                              [self deleteConversation];
+//                                                          }]];
+//
+//    }
 
-        [theController addAction:[UIAlertAction actionWithTitle:NSLocalizedStringWithDefaultValue(@"deleteConversation", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Delete Conversation" , @"")
-                                                          style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                                                              [self deleteConversation];
-                                                          }]];
-
-    }
-
-    if(!self.channelKey && !self.conversationId && [ALApplozicSettings isAudioVideoEnabled])
-    {
-
-        [theController addAction:[UIAlertAction actionWithTitle:  NSLocalizedStringWithDefaultValue(@"videoCall", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Video Call" , @"")
-style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-
-            [self openCallView:NO];
-        }]];
-
-        [theController addAction:[UIAlertAction actionWithTitle:NSLocalizedStringWithDefaultValue(@"audioCall", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Audio Call" , @"")
- style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-
-            [self openCallView:YES];
-        }]];
-    }
+//    if(!self.channelKey && !self.conversationId && [ALApplozicSettings isAudioVideoEnabled])
+//    {
+//
+//        [theController addAction:[UIAlertAction actionWithTitle:  NSLocalizedStringWithDefaultValue(@"videoCall", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Video Call" , @"")
+//style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//
+//            [self openCallView:NO];
+//        }]];
+//
+//        [theController addAction:[UIAlertAction actionWithTitle:NSLocalizedStringWithDefaultValue(@"audioCall", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Audio Call" , @"")
+// style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//
+//            [self openCallView:YES];
+//        }]];
+//    }
 
     [self presentViewController:theController animated:YES completion:nil];
 }

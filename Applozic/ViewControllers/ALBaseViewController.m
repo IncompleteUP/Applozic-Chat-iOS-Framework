@@ -69,7 +69,7 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
     self.placeHolderColor = [ALApplozicSettings getPlaceHolderColor];
     self.sendMessageTextView.textColor = self.placeHolderColor;
     self.sendMessageTextView.backgroundColor = [ALApplozicSettings getMsgTextViewBGColor];
-    self.sendMessageTextView.textContainerInset = UIEdgeInsetsMake(0, 8, 0, 8);
+    self.sendMessageTextView.contentInset = UIEdgeInsetsMake(0, 8, 0, 8);
     
     if ([ALUtilityClass parsedALChatCostomizationPlistForKey:APPLOZIC_CHAT_BACKGROUND_COLOR])
         self.mTableView.backgroundColor = (UIColor *)[ALUtilityClass parsedALChatCostomizationPlistForKey:APPLOZIC_CHAT_BACKGROUND_COLOR];
