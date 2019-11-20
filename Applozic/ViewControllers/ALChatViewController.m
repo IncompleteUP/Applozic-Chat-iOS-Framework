@@ -255,6 +255,7 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
     self.mTableView.estimatedRowHeight = 0;
 
 //    [self.label setHidden:NO];
+    
     [self.label setHidden:YES];
     self.label.alpha = 1;
     [self.loadEarlierAction setHidden:YES];
