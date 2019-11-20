@@ -1681,8 +1681,11 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
         [self.sendButton setHidden: YES];
         isMicButtonVisible = YES;
     }else {
-        UIImage* micImage = [ALUtilityClass getImageFromFramworkBundle:@"mic_icon.png"];
-        [self.sendButton setImage:micImage forState:UIControlStateNormal];
+//        UIImage* micImage = [ALUtilityClass getImageFromFramworkBundle:@"mic_icon.png"];
+//        [self.sendButton setImage:micImage forState:UIControlStateNormal];
+        [self.sendButton setTitle:@"send" forState:UIControlStateNormal];
+        [self.sendButton setTintColor:[ALApplozicSettings getSendIconColour]];
+        
         isMicButtonVisible = YES;
     }
 }
@@ -1711,8 +1714,10 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
         [micButton setHidden: YES];
         [self.sendButton setHidden: NO];
     }
-    UIImage* sendImage = [ALUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
-    [self.sendButton setImage:sendImage forState:UIControlStateNormal];
+//    UIImage* sendImage = [ALUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
+//    [self.sendButton setImage:sendImage forState:UIControlStateNormal];
+    [self.sendButton setTitle:@"send" forState:UIControlStateNormal];
+    [self.sendButton setTintColor:[ALApplozicSettings getSendIconColour]];
     isMicButtonVisible = NO;
 }
 
@@ -3659,6 +3664,7 @@ style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
     [self.sendMessageTextView setUserInteractionEnabled:!disable];
     [self.sendButton setUserInteractionEnabled:!disable];
     [micButton setUserInteractionEnabled:!disable];
+    
     [self.attachmentOutlet setUserInteractionEnabled:!disable];
 }
 

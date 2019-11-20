@@ -48,7 +48,7 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
     [self setUpTheming];
     
     self.sendMessageTextView.clipsToBounds = YES;
-    self.sendMessageTextView.layer.cornerRadius = sendTextViewCornerRadius;
+    self.sendMessageTextView.layer.cornerRadius = self.sendMessageTextView.frame.size.height / 2.0;
 //    self.sendMessageTextView.frame.size.height/5;
     
     self.sendMessageTextView.textContainer.lineBreakMode = NSLineBreakByCharWrapping;
@@ -56,6 +56,12 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
 //                                                                   self.attachmentOutlet.frame.size.width,// Left
 //                                                                   self.attachmentOutlet.frame.origin.y, // Bottom
 //                                                                   self.attachmentOutlet.frame.size.width/4);   // Right
+    self.attachmentOutlet.clipsToBounds = YES;
+    self.attachmentOutlet.layer.cornerRadius = self.attachmentOutlet.frame.size.height / 2.0;
+    
+    
+    
+    
     self.sendMessageTextView.delegate = self;
 /*    self.placeHolderTxt = @"Write a Message...";
     self.sendMessageTextView.text = self.placeHolderTxt;
@@ -320,7 +326,7 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
 -(void)sendButtonUI
 {
     [self.sendButton setBackgroundColor:[ALApplozicSettings getColorForSendButton]];
-   self.sendButton.layer.cornerRadius = sendTextViewCornerRadius + 5;
+    self.sendButton.layer.cornerRadius = self.sendButton.frame.size.height/2.0;
     self.sendButton.layer.masksToBounds = YES;
     
     [self.typingMessageView sendSubviewToBack:self.typeMsgBG];
