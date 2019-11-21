@@ -25,7 +25,7 @@
 #define MT_INBOX_CONSTANT "4"
 #define MT_OUTBOX_CONSTANT "5"
 
-#define USER_PROFILE_PADDING_X 5
+#define USER_PROFILE_PADDING_X 8
 #define USER_PROFILE_WIDTH 45
 #define USER_PROFILE_HEIGHT 45
 
@@ -68,7 +68,7 @@
         
         self.backgroundColor = [UIColor clearColor];
         
-        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 45, 45)];
+        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(USER_PROFILE_PADDING_X, 5, 45, 45)];
         self.mUserProfileImageView.contentMode = UIViewContentModeScaleAspectFill;
         self.mUserProfileImageView.layer.cornerRadius=self.mUserProfileImageView.frame.size.width/2;
         self.mUserProfileImageView.clipsToBounds = YES;

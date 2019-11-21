@@ -267,7 +267,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhR-xr-fbW">
-                                                    <rect key="frame" x="35" y="24" width="35" height="35"/>
+                                                    <rect key="frame" x="40" y="24" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="NuP-AF-RmE"/>
                                                     </constraints>
@@ -276,10 +276,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cri-hJ-XT9">
-                                                    <rect key="frame" x="25" y="14" width="55" height="55"/>
+                                                    <rect key="frame" x="30" y="14" width="55" height="55"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Person Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8h-Lp-4Jd">
-                                                    <rect key="frame" x="99" y="33" width="211" height="15.5"/>
+                                                    <rect key="frame" x="104" y="33" width="206" height="15.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -294,7 +294,7 @@
                                                 <constraint firstItem="Cri-hJ-XT9" firstAttribute="centerX" secondItem="yhR-xr-fbW" secondAttribute="centerX" id="aqb-2M-FXu"/>
                                                 <constraint firstItem="Cri-hJ-XT9" firstAttribute="top" secondItem="p0o-92-QNi" secondAttribute="topMargin" constant="3" id="hrB-Y5-fZ6"/>
                                                 <constraint firstItem="H8h-Lp-4Jd" firstAttribute="leading" secondItem="Cri-hJ-XT9" secondAttribute="trailing" constant="19" id="lWB-6A-zwc"/>
-                                                <constraint firstItem="Cri-hJ-XT9" firstAttribute="leading" secondItem="p0o-92-QNi" secondAttribute="leadingMargin" constant="10" id="q1c-Yy-lRm"/>
+                                                <constraint firstItem="Cri-hJ-XT9" firstAttribute="leading" secondItem="p0o-92-QNi" secondAttribute="leadingMargin" constant="15" id="q1c-Yy-lRm"/>
                                                 <constraint firstItem="H8h-Lp-4Jd" firstAttribute="top" secondItem="p0o-92-QNi" secondAttribute="topMargin" constant="22" id="qSW-Dr-qNT"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="H8h-Lp-4Jd" secondAttribute="trailing" constant="50" id="rou-07-HZC"/>
                                             </constraints>
