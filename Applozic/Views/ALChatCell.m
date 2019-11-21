@@ -315,7 +315,7 @@
                                               theTextSize.width, theTextSize.height);
 
         
-        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x + MESSAGE_PADDING_X ,
+        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x,
                                               mMessageLabelY,
                                               theTextSize.width, theTextSize.height);
         
@@ -402,7 +402,7 @@
         
         self.mMessageLabel.textColor = [ALApplozicSettings getSendMsgTextColor];
         
-        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x + MESSAGE_PADDING_X,
+        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x,
                                               mMessageLabelY, theTextSize.width, theTextSize.height);
         
         self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width)
