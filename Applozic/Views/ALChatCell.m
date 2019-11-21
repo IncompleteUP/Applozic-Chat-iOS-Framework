@@ -31,7 +31,7 @@
 
 #define BUBBLE_PADDING_X 13
 #define BUBBLE_PADDING_WIDTH 20
-#define BUBBLE_PADDING_X_OUTBOX 27
+#define BUBBLE_PADDING_X_OUTBOX 10
 #define BUBBLE_PADDING_HEIGHT 20
 #define BUBBLE_PADDING_HEIGHT_GRP 35
 
@@ -371,7 +371,7 @@
 
         
         self.mBubleImageView.frame = CGRectMake((viewSize.width - theTextSize.width - BUBBLE_PADDING_X_OUTBOX) , 0,
-                                                requiredBubbleWidth+10,
+                                                requiredBubbleWidth,
                                                 requiredBubbleHeight);
         
         self.mBubleImageView.layer.shadowOpacity = 0.3;
