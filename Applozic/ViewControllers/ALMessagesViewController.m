@@ -1001,7 +1001,7 @@
     }
     else
     {
-        tableView.rowHeight = 81.5;
+        tableView.rowHeight = 75.5;
     }
     
     return tableView.rowHeight;

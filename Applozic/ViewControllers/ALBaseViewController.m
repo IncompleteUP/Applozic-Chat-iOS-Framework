@@ -484,8 +484,8 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
     [self setHeightOfTextViewDynamically];
 }
 
-- (IBAction)attachmentActionMethod:(id)sender {
-    [self attachmentAction];
+- (IBAction)attachmentActionMethod:(UIButton *)sender {
+//    [self attachmentAction];
 }
 
 // SET CUSTOM BUTTON FOR CALL

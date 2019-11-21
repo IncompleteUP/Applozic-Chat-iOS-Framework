@@ -28,12 +28,19 @@
 @property (nonatomic, strong) NSArray * wordArray;
 @property (strong, nonatomic) UIBarButtonItem * callButton;
 @property (strong, nonatomic) UIBarButtonItem * closeButton;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomViewHeight;
+@property (weak, nonatomic) IBOutlet UIButton *btn_camera;
+@property (weak, nonatomic) IBOutlet UIButton *btn_file;
+/// tag:camera=56560 file=56561
+- (IBAction)clickBottomViewAction:(UIButton *)sender;
 
 @property (strong, nonatomic) NSMutableArray <UIBarButtonItem *> * navRightBarButtonItems;
 
 - (IBAction)sendAction:(id)sender;
 -(void) scrollTableViewToBottomWithAnimation:(BOOL) animated;
-- (IBAction)attachmentActionMethod:(id)sender;
+//- (IBAction)attachmentActionMethod:(id)sender;
+- (IBAction)attachmentActionMethod:(UIButton *)sender;
 -(UIView *)setCustomBackButton;
 
 @property (strong, nonatomic) IBOutlet UIImageView *typeMsgBG;
