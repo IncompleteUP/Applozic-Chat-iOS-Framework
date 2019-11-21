@@ -259,7 +259,7 @@
         CGFloat requiredBubbleHeight =  theTextSize.height + BUBBLE_PADDING_HEIGHT;
         
 
-        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 13,
+        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width,
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         
