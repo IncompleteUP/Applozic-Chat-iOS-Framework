@@ -31,7 +31,7 @@
 
 #define BUBBLE_PADDING_X 13
 #define BUBBLE_PADDING_WIDTH 20
-#define BUBBLE_PADDING_X_OUTBOX 10
+#define BUBBLE_PADDING_X_OUTBOX 27
 #define BUBBLE_PADDING_HEIGHT 20
 #define BUBBLE_PADDING_HEIGHT_GRP 35
 
@@ -310,14 +310,14 @@
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         
-        self.mMessageLabel.frame = CGRectMake(self.mChannelMemberName.frame.origin.x-5,
-                                              self.mChannelMemberName.frame.origin.y + self.mChannelMemberName.frame.size.height + MESSAGE_PADDING_X + MESSAGE_PADDING_X,
+        self.mMessageLabel.frame = CGRectMake(self.mChannelMemberName.frame.origin.x,
+                                              self.mChannelMemberName.frame.origin.y + self.mChannelMemberName.frame.size.height + MESSAGE_PADDING_Y_GRP,
                                               theTextSize.width, theTextSize.height);
 
         
-        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x-5,
+        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x + MESSAGE_PADDING_X ,
                                               mMessageLabelY,
-                                              theTextSize.width + MESSAGE_PADDING_X + MESSAGE_PADDING_X, theTextSize.height);
+                                              theTextSize.width, theTextSize.height);
         
         
         
@@ -402,8 +402,8 @@
         
         self.mMessageLabel.textColor = [ALApplozicSettings getSendMsgTextColor];
         
-        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x-5,
-                                              mMessageLabelY, theTextSize.width + MESSAGE_PADDING_X + MESSAGE_PADDING_X, theTextSize.height);
+        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x + MESSAGE_PADDING_X,
+                                              mMessageLabelY, theTextSize.width, theTextSize.height);
         
         self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width)
                                            - theDateSize.width - DATE_PADDING_X,
