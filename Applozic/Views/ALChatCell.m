@@ -310,12 +310,12 @@
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         
-        self.mMessageLabel.frame = CGRectMake(self.mChannelMemberName.frame.origin.x,
+        self.mMessageLabel.frame = CGRectMake(self.mChannelMemberName.frame.origin.x-MESSAGE_PADDING_X,
                                               self.mChannelMemberName.frame.origin.y + self.mChannelMemberName.frame.size.height + MESSAGE_PADDING_X,
                                               theTextSize.width, theTextSize.height);
 
         
-        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x ,
+        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x-MESSAGE_PADDING_X,
                                               mMessageLabelY,
                                               theTextSize.width + MESSAGE_PADDING_X, theTextSize.height);
         
@@ -402,7 +402,7 @@
         
         self.mMessageLabel.textColor = [ALApplozicSettings getSendMsgTextColor];
         
-        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x,
+        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x-MESSAGE_PADDING_X,
                                               mMessageLabelY, theTextSize.width + MESSAGE_PADDING_X, theTextSize.height);
         
         self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width)
