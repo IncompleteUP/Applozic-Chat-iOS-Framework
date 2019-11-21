@@ -587,9 +587,9 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
     CGRect bounds = CGRectMake(0, 0, imgName.size.width, imgName.size.height);
     UIRectFill(bounds);
     //绘制一次
-    [self drawInRect:bounds blendMode:kCGBlendModeOverlay alpha:1.0f];
+    [imgName drawInRect:bounds blendMode:kCGBlendModeOverlay alpha:1.0f];
     //再绘制一次
-    [self drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:1.0f];
+    [imgName drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:1.0f];
     //获取图片
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
