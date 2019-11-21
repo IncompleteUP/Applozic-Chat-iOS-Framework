@@ -1928,8 +1928,6 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                         <outlet property="bottomViewHeight" destination="PAs-Y7-Gx3" id="aXk-Up-ECy"/>
                         <outlet property="btn_camera" destination="lLW-M2-epp" id="vBu-s7-Jab"/>
                         <outlet property="btn_file" destination="NhA-oN-RSM" id="OPP-sj-2S0"/>
-                        <outlet property="img_camera" destination="Jsy-aW-QEA" id="1oh-bL-Ud6"/>
-                        <outlet property="img_file" destination="X4x-kl-LbB" id="vgS-Dt-fuZ"/>
                         <outlet property="loadEarlierAction" destination="Bt8-EH-qKK" id="iou-Dl-fiU"/>
                         <outlet property="mActivityIndicator" destination="asq-OT-e0Z" id="YaB-Iy-7rc"/>
                         <outlet property="mTableView" destination="3bd-KT-wrK" id="3Dl-dt-9Iy"/>
