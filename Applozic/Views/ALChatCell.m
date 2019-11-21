@@ -520,7 +520,7 @@
     [self.mDateLabel setHidden:YES];
     [self.mBubleImageView setHidden:YES];
     CGFloat dateY = 0;
-    [self.mMessageLabel setFrame:CGRectMake(0, dateY, viewSize.width, theTextSize.height+10)];
+    [self.mMessageLabel setFrame:CGRectMake(0, dateY, viewSize.width+10, theTextSize.height+10)];
     [self.mMessageLabel setTextAlignment:NSTextAlignmentCenter];
     [self.mMessageLabel setText:alMessage.message];
     [self.mMessageLabel setBackgroundColor:[UIColor clearColor]];
