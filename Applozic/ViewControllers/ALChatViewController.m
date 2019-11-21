@@ -2881,7 +2881,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 
 
 - (void)showBottomView:(BOOL)isShow{
-    [self handleTapGestureForKeyBoard];
+//    [self handleTapGestureForKeyBoard];
     self.isShowBoottomView = isShow;
     for (UIView *sView in self.bottomView.subviews) {
         sView.hidden = !isShow;
@@ -4737,7 +4737,8 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
         [self.sendMessageTextView resignFirstResponder];
     }
     if (self.isShowBoottomView) {
-        [self showBottomView:NO];
+//        [self showBottomView:NO];
+        [self attachmentActionMethod:self.attachmentOutlet];
     }
     
 }
