@@ -997,7 +997,7 @@
 {
     if(indexPath.section == 0)
     {
-        tableView.rowHeight = 40.0;
+        tableView.rowHeight = 0.0;
     }
     else
     {

@@ -214,8 +214,8 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
     [self.attachmentOutlet setBackgroundColor:[ALApplozicSettings getAttachmentIconColour]];
     [self.sendButton setBackgroundColor:[ALApplozicSettings getSendIconColour]];
     self.alphabetiColorCodesDictionary = [ALApplozicSettings getUserIconFirstNameColorCodes];
-    [self.btn_camera setTintColor:[ALApplozicSettings getSendIconColour]];
-    [self.btn_file setTintColor:[ALApplozicSettings getSendIconColour]];
+//    [self.btn_camera setTintColor:[ALApplozicSettings getSendIconColour]];
+//    [self.btn_file setTintColor:[ALApplozicSettings getSendIconColour]];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -241,6 +241,7 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self showBottomView:NO];
     self.isVisible = YES;
 
     [[NSNotificationCenter defaultCenter]
@@ -2879,6 +2880,7 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
 
 
 - (void)showBottomView:(BOOL)isShow{
+    [self handleTapGestureForKeyBoard];
     for (UIView *sView in self.bottomView.subviews) {
         sView.hidden = !isShow;
     }
