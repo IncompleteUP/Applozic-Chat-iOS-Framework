@@ -25,7 +25,7 @@
 #define MT_INBOX_CONSTANT "4"
 #define MT_OUTBOX_CONSTANT "5"
 
-#define USER_PROFILE_PADDING_X 8
+#define USER_PROFILE_PADDING_X 5
 #define USER_PROFILE_WIDTH 45
 #define USER_PROFILE_HEIGHT 45
 
@@ -68,7 +68,7 @@
         
         self.backgroundColor = [UIColor clearColor];
         
-        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(USER_PROFILE_PADDING_X, 5, 45, 45)];
+        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 45, 45)];
         self.mUserProfileImageView.contentMode = UIViewContentModeScaleAspectFill;
         self.mUserProfileImageView.layer.cornerRadius=self.mUserProfileImageView.frame.size.width/2;
         self.mUserProfileImageView.clipsToBounds = YES;
@@ -402,8 +402,8 @@
         
         self.mMessageLabel.textColor = [ALApplozicSettings getSendMsgTextColor];
         
-        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x,
-                                              mMessageLabelY, theTextSize.width + MESSAGE_PADDING_X+10, theTextSize.height);
+        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x + MESSAGE_PADDING_X,
+                                              mMessageLabelY, theTextSize.width, theTextSize.height);
         
         self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width)
                                            - theDateSize.width - DATE_PADDING_X,
@@ -520,7 +520,7 @@
     [self.mDateLabel setHidden:YES];
     [self.mBubleImageView setHidden:YES];
     CGFloat dateY = 0;
-    [self.mMessageLabel setFrame:CGRectMake(0, dateY, viewSize.width+20, theTextSize.height+10)];
+    [self.mMessageLabel setFrame:CGRectMake(0, dateY, viewSize.width, theTextSize.height+10)];
     [self.mMessageLabel setTextAlignment:NSTextAlignmentCenter];
     [self.mMessageLabel setText:alMessage.message];
     [self.mMessageLabel setBackgroundColor:[UIColor clearColor]];
