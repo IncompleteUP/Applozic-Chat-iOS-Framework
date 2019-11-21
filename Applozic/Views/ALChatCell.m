@@ -259,7 +259,7 @@
         CGFloat requiredBubbleHeight =  theTextSize.height + BUBBLE_PADDING_HEIGHT;
         
 
-        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width,
+        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 13,
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         
@@ -360,7 +360,7 @@
             self.mBubleImageView.backgroundColor = [UIColor whiteColor];
         }
         self.mUserProfileImageView.alpha = 0;
-        self.mUserProfileImageView.frame = CGRectMake(viewSize.width - 53, 0, 0, 45);
+        self.mUserProfileImageView.frame = CGRectMake(viewSize.width - 43, 0, 0, 45);
         
         self.mMessageStatusImageView.hidden = NO;
         
