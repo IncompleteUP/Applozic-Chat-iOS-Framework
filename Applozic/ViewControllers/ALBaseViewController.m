@@ -331,7 +331,7 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
 -(void)sendButtonUI
 {
     [self.sendButton setBackgroundColor:[ALApplozicSettings getColorForSendButton]];
-    self.sendButton.layer.cornerRadius = 8.0;
+    self.sendButton.layer.cornerRadius = 5.0;
     self.sendButton.layer.masksToBounds = YES;
     
     [self.typingMessageView sendSubviewToBack:self.typeMsgBG];

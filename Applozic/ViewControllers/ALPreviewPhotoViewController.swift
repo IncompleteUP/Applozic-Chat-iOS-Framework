@@ -54,7 +54,7 @@ import UIKit
         scrollView.delegate = self
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(singleTapped))
         singleTap.numberOfTapsRequired = 1
-        scrollView.addGestureRecognizer(singleTap)
+//        scrollView.addGestureRecognizer(singleTap)
         
         if(pathExtention != "gif"){
             let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped(tap:)))

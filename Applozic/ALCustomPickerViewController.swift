@@ -110,8 +110,11 @@ public class ALBaseNavigationViewController: UINavigationController {
             backImage = backImage?.imageFlippedForRightToLeftLayoutDirection()
         }
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: backImage, style: .plain, target: self , action: #selector(dismissAction(_:)))
-        self.navigationController?.navigationBar.barTintColor = ALApplozicSettings.getColorForNavigation()
-        self.navigationController?.navigationBar.tintColor = ALApplozicSettings.getColorForNavigationItem()
+        //[UIColor colorWithRed:51.0/255 green:51.0/255 blue:51.0/255 alpha:0.5]
+        var themColor = UIColor(red: 245 / 255.0, green: 52 / 255.0, blue: 40 / 255.0);
+        
+        self.navigationController?.navigationBar.barTintColor = themColor
+        self.navigationController?.navigationBar.tintColor = themColor
         if let aSize = UIFont(name: "Helvetica-Bold", size: 18) {
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: ALApplozicSettings.getColorForNavigationItem(),
                                                                             NSAttributedString.Key.font: aSize]
