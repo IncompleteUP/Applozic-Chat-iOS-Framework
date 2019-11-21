@@ -31,7 +31,7 @@
 
 #define BUBBLE_PADDING_X 13
 #define BUBBLE_PADDING_WIDTH 20
-#define BUBBLE_PADDING_X_OUTBOX 27
+#define BUBBLE_PADDING_X_OUTBOX 10
 #define BUBBLE_PADDING_HEIGHT 20
 #define BUBBLE_PADDING_HEIGHT_GRP 35
 
@@ -402,7 +402,7 @@
         
         self.mMessageLabel.textColor = [ALApplozicSettings getSendMsgTextColor];
         
-        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x,
+        self.mMessageLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x + MESSAGE_PADDING_X,
                                               mMessageLabelY, theTextSize.width, theTextSize.height);
         
         self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width)
