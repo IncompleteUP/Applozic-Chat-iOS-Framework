@@ -31,9 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomViewHeight;
 @property (weak, nonatomic) IBOutlet UIButton *btn_camera;
-@property (weak, nonatomic) IBOutlet UIImageView *img_camera;
 @property (weak, nonatomic) IBOutlet UIButton *btn_file;
-@property (weak, nonatomic) IBOutlet UIImageView *img_file;
 /// tag:camera=56560 file=56561
 - (IBAction)clickBottomViewAction:(UIButton *)sender;
 

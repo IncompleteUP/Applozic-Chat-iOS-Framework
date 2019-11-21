@@ -93,9 +93,7 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
      [self.btn_camera setTintColor:[ALApplozicSettings getSendIconColour]];
      [self.btn_file setTintColor:[ALApplozicSettings getSendIconColour]];
      **/
-    [self imageChangeColor:[ALApplozicSettings getSendIconColour] withImageView:self.img_camera withImageName:@"ic_action_camera"];
-    [self imageChangeColor:[ALApplozicSettings getSendIconColour] withImageView:self.img_file withImageName:@"ic_action_attachment"];
-    self.img_file.transform = CGAffineTransformMakeRotation(M_PI_4);
+
     
     [self parseRestrictedWordFile];
 }
@@ -576,28 +574,4 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
     return view;
 }   
 
-//绘图
-- (void)imageChangeColor:(UIColor*)color withImageView:(UIImageView *)imageView withImageName:(NSString *)imageName{
-    UIImage *imgName = [UIImage imageNamed:imageName];
-    //获取画布
-    UIGraphicsBeginImageContextWithOptions(imgName.size, NO, imgName.scale);
-    //画笔沾取颜色
-    [color setFill];
-    
-    CGRect bounds = CGRectMake(0, 0, imgName.size.width, imgName.size.height);
-    UIRectFill(bounds);
-    //绘制一次
-    [imgName drawInRect:bounds blendMode:kCGBlendModeOverlay alpha:1.0f];
-    //再绘制一次
-    [imgName drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:1.0f];
-    //获取图片
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    imageView.image = img;
-}
-
-/// 更改图片方向
-- (void)imageWithOrientation:(UIImageOrientation)orientation withImageView:(UIImageView *)imageView{
-    imageView.image = [UIImage imageWithCGImage:imageView.image.CGImage scale:imageView.image.scale orientation:orientation];
-}
 @end

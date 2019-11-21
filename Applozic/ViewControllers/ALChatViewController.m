@@ -2885,7 +2885,7 @@ NSString * const ThirdPartyProfileTapNotification = @"ThirdPartyProfileTapNotifi
         sView.hidden = !isShow;
     }
     [UIView animateWithDuration:0.25 animations:^{
-        self.bottomViewHeight.constant = isShow ? 130.0 : 0.0;
+        self.bottomViewHeight.constant = isShow ? 100.0 : 0.0;
     }];
 }
 
