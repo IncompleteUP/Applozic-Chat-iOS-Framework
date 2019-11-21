@@ -360,7 +360,7 @@
             self.mBubleImageView.backgroundColor = [UIColor whiteColor];
         }
         self.mUserProfileImageView.alpha = 0;
-        self.mUserProfileImageView.frame = CGRectMake(viewSize.width - 43, 0, 0, 45);
+        self.mUserProfileImageView.frame = CGRectMake(viewSize.width - 53, 0, 0, 45);
         
         self.mMessageStatusImageView.hidden = NO;
         
@@ -370,7 +370,7 @@
         
 
         
-        self.mBubleImageView.frame = CGRectMake((viewSize.width - theTextSize.width - BUBBLE_PADDING_X_OUTBOX) , 0,
+        self.mBubleImageView.frame = CGRectMake((viewSize.width - theTextSize.width - 10) , 0,
                                                 requiredBubbleWidth+10,
                                                 requiredBubbleHeight);
         
