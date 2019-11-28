@@ -171,7 +171,6 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     CGFloat CONTACT_CELL_HEIGHT;
     
     UIButton * titleLabelButton;
-    
     CGRect previousRect;
     CGRect maxHeight;
     CGRect minHeight;

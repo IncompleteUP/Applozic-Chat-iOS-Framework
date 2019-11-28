@@ -44,10 +44,26 @@
     NSString * className = [ALApplozicSettings getCustomNavigationControllerClassName];
     if (![className isKindOfClass:[NSString class]]) className = @"UINavigationController";
     UINavigationController * navC = [(UINavigationController *)[NSClassFromString(className) alloc] initWithRootViewController:vc];
-    navC.navigationBar.barTintColor = [UIColor colorWithRed:245.0/255 green:52.0/255 blue:40.0/255 alpha:1.0];
+    UIImage *navImage = [self imageWithColor:[UIColor colorWithRed:245.0/255 green:52.0/255 blue:40.0/255 alpha:1.0] size:CGSizeMake(1, 1)];
+    [navC setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
+    [navC setTintColor:[UIColor clearColor]];
+    [navC setBarTintColor:[UIColor clearColor]];
+    navC.navigationItem.rightBarButtonItem = nil;
     return navC;
 }
-
+- (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size{
+    if (color == nil) {
+        return nil;
+    }
+    CGRect rect=CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
+}
 -(void)launchIndividualChat:(NSString *)userId withGroupId:(NSNumber*)groupID
     andViewControllerObject:(UIViewController *)viewController andWithText:(NSString *)text
 {
