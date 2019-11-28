@@ -44,6 +44,7 @@
     NSString * className = [ALApplozicSettings getCustomNavigationControllerClassName];
     if (![className isKindOfClass:[NSString class]]) className = @"UINavigationController";
     UINavigationController * navC = [(UINavigationController *)[NSClassFromString(className) alloc] initWithRootViewController:vc];
+    navC.navigationBar.barTintColor = [UIColor colorWithRed:245.0/255 green:52.0/255 blue:40.0/255 alpha:1.0];
     return navC;
 }
 

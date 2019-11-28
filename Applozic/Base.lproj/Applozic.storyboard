@@ -227,17 +227,11 @@
                                 <action selector="backButtonAction:" destination="BYZ-38-t0r" id="vWD-0a-q4j"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="3pR-ud-INa">
-                            <connections>
-                                <action selector="navigationRightButtonAction:" destination="BYZ-38-t0r" id="tds-rS-yDu"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="sTB-Ym-PL1" id="gaD-RU-uDt"/>
                         <outlet property="mActivityIndicator" destination="dlR-eX-vMZ" id="iW8-EO-GId"/>
                         <outlet property="mTableView" destination="S0P-A8-QJi" id="faw-jS-ahn"/>
-                        <outlet property="navigationRightButton" destination="3pR-ud-INa" id="eZH-B4-U0M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1727,10 +1721,10 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                         <rect key="frame" x="0.0" y="0.0" width="299.5" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xm_camera" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-aW-QEA">
-                                                <rect key="frame" x="138" y="39.5" width="24" height="21"/>
+                                                <rect key="frame" x="142" y="42" width="16" height="16"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZH-4v-FUB">
-                                                <rect key="frame" x="124.5" y="60.5" width="51" height="20"/>
+                                                <rect key="frame" x="124.5" y="58" width="51" height="20"/>
                                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1758,10 +1752,10 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                         <rect key="frame" x="300.5" y="0.0" width="299.5" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xm_photo" translatesAutoresizingMaskIntoConstraints="NO" id="X4x-kl-LbB">
-                                                <rect key="frame" x="138.5" y="39.5" width="23" height="21"/>
+                                                <rect key="frame" x="142" y="42" width="16" height="16"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zH-0r-nj0">
-                                                <rect key="frame" x="138.5" y="60.5" width="23" height="20"/>
+                                                <rect key="frame" x="138.5" y="58" width="23" height="20"/>
                                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1959,6 +1953,10 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
         <scene sceneID="mdS-IK-omW">
             <objects>
                 <viewController id="bsg-GI-UdF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hNR-MU-Fju"/>
+                        <viewControllerLayoutGuide type="bottom" id="El6-D2-5gw"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M3H-PA-QeR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
