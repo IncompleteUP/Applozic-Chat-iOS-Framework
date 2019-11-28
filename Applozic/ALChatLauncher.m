@@ -45,9 +45,9 @@
     if (![className isKindOfClass:[NSString class]]) className = @"UINavigationController";
     UINavigationController * navC = [(UINavigationController *)[NSClassFromString(className) alloc] initWithRootViewController:vc];
     UIImage *navImage = [self imageWithColor:[UIColor colorWithRed:245.0/255 green:52.0/255 blue:40.0/255 alpha:1.0] size:CGSizeMake(1, 1)];
-    [navC setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
-    [navC setTintColor:[UIColor clearColor]];
-    [navC setBarTintColor:[UIColor clearColor]];
+    [navC.navigationBar setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
+    [navC.navigationBar setTintColor:[UIColor clearColor]];
+    [navC.navigationBar setBarTintColor:[UIColor clearColor]];
     navC.navigationItem.rightBarButtonItem = nil;
     return navC;
 }
