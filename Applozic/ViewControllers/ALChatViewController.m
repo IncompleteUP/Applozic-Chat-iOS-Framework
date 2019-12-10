@@ -5,7 +5,7 @@
 //
 //  Copyright (c) 2015 AppLozic. All rights reserved.
 //
-#import "UIView+Toast.h"
+#import "UIView+ALToast.h"
 #import <AVKit/AVKit.h>
 #import "ALChatViewController.h"
 #import "ALChatCell.h"

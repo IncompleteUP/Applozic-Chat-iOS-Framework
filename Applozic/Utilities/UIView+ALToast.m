@@ -1,12 +1,12 @@
 //
-//  UIView+Toast.m
+//  UIView+ALToast.m
 //  Toast
 //
 //  Copyright 2014 Charles Scalesse.
 //
 
 
-#import "UIView+Toast.h"
+#import "UIView+ALToast.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 

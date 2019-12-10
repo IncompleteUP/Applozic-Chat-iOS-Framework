@@ -11,7 +11,7 @@
 #define TIME_LABEL_SIZE 12
 #define IMAGE_NAME_LABEL_SIZE 14
 
-#import "UIView+Toast.h"
+#import "UIView+ALToast.h"
 #import "TSMessageView.h"
 #import "ALMessagesViewController.h"
 #import "ALConstant.h"
