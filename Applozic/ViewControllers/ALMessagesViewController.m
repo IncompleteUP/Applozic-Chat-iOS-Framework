@@ -11,7 +11,7 @@
 #define TIME_LABEL_SIZE 12
 #define IMAGE_NAME_LABEL_SIZE 14
 
-#import "UIView+ALToast.h"
+#import "UIView+Toast.h"
 #import "TSMessageView.h"
 #import "ALMessagesViewController.h"
 #import "ALConstant.h"
@@ -377,8 +377,8 @@
 -(void)refreshMessageList
 {
     NSString * toastMsg = @"Syncing messages with the server,\n it might take few mins!";
-    [self.view makeToast:toastMsg duration:1.0 position:CSToastPositionBottom title:nil];
-    
+//    [self.view makeToast:toastMsg duration:1.0 position:CSToastPositionBottom title:nil];
+    [self.view makeToast:toastMsg duration:1.0 position:CSToastPositionCenter];
     [ALMessageService getLatestMessageForUser:[ALUserDefaultsHandler getDeviceKeyString] withCompletion:^(NSMutableArray  * messageList, NSError *error) {
         
         if(error)

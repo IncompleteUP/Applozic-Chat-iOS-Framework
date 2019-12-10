@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0953EBAA239F982800D67E52 /* UIView+Toast.h in Headers */ = {isa = PBXBuildFile; fileRef = 0953EBA8239F982800D67E52 /* UIView+Toast.h */; };
+		0953EBAB239F982800D67E52 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953EBA9239F982800D67E52 /* UIView+Toast.m */; };
 		103CC2BB2032EDF200600D16 /* AlChannelResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 103CC2B52032EDF100600D16 /* AlChannelResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		103CC2BC2032EDF200600D16 /* AlChannelInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 103CC2B62032EDF100600D16 /* AlChannelInfoModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		103CC2BD2032EDF200600D16 /* AlChannelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 103CC2B72032EDF100600D16 /* AlChannelResponse.m */; };
@@ -130,8 +132,6 @@
 		46ABAAD81DA4054000EC48AC /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46ABAAD61DA4054000EC48AC /* ContactsUI.framework */; };
 		46B258A01E5B03300078BBA5 /* ALChannelMsgCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 46B2589E1E5B03300078BBA5 /* ALChannelMsgCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46B258A11E5B03300078BBA5 /* ALChannelMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B2589F1E5B03300078BBA5 /* ALChannelMsgCell.m */; };
-		6D0877081D01B0F900DB491A /* UIView+ALToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D0877071D01B0F900DB491A /* UIView+ALToast.h */; };
-		6D08770A1D01B0FE00DB491A /* UIView+ALToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0877091D01B0FE00DB491A /* UIView+ALToast.m */; };
 		6D0D107A1D4CD7B6009853FB /* ALImagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D0D10781D4CD7B6009853FB /* ALImagePickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D0D107B1D4CD7B6009853FB /* ALImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D10791D4CD7B6009853FB /* ALImagePickerController.m */; };
 		6D1385741CA9B80D009E6F50 /* ALMultipleAttachmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D1385721CA9B80D009E6F50 /* ALMultipleAttachmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -417,6 +417,8 @@
 
 /* Begin PBXFileReference section */
 		01C54BFD564D907E8A21F0E2 /* Pods-Applozic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Applozic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Applozic/Pods-Applozic.release.xcconfig"; sourceTree = "<group>"; };
+		0953EBA8239F982800D67E52 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		0953EBA9239F982800D67E52 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		103CC2B52032EDF100600D16 /* AlChannelResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlChannelResponse.h; path = Applozic/AlChannelResponse.h; sourceTree = "<group>"; };
 		103CC2B62032EDF100600D16 /* AlChannelInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlChannelInfoModel.h; path = Applozic/AlChannelInfoModel.h; sourceTree = "<group>"; };
 		103CC2B72032EDF100600D16 /* AlChannelResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlChannelResponse.m; path = Applozic/AlChannelResponse.m; sourceTree = "<group>"; };
@@ -552,8 +554,6 @@
 		46B2589E1E5B03300078BBA5 /* ALChannelMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALChannelMsgCell.h; path = Applozic/ALChannelMsgCell.h; sourceTree = "<group>"; };
 		46B2589F1E5B03300078BBA5 /* ALChannelMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALChannelMsgCell.m; path = Applozic/ALChannelMsgCell.m; sourceTree = "<group>"; };
 		61F85D44BCB97CB78AA5B43A /* libPods-Applozic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Applozic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D0877071D01B0F900DB491A /* UIView+ALToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ALToast.h"; sourceTree = "<group>"; };
-		6D0877091D01B0FE00DB491A /* UIView+ALToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ALToast.m"; sourceTree = "<group>"; };
 		6D0D10781D4CD7B6009853FB /* ALImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALImagePickerController.h; sourceTree = "<group>"; };
 		6D0D10791D4CD7B6009853FB /* ALImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALImagePickerController.m; sourceTree = "<group>"; };
 		6D1385721CA9B80D009E6F50 /* ALMultipleAttachmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMultipleAttachmentView.h; sourceTree = "<group>"; };
@@ -1039,6 +1039,8 @@
 		6D6DF0A21BC5364C00EBA00F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0953EBA8239F982800D67E52 /* UIView+Toast.h */,
+				0953EBA9239F982800D67E52 /* UIView+Toast.m */,
 				18FB8A4C22D658C9000D3481 /* SearchResultCache.h */,
 				18FB8A4D22D658C9000D3481 /* SearchResultCache.m */,
 				1866E32B218749BD00667018 /* UIColor+Extension.swift */,
@@ -1051,11 +1053,9 @@
 				6D4FE48D1D7411F70044A7E6 /* NSData+AES.h */,
 				6D4FE48E1D7411F70044A7E6 /* NSData+AES.m */,
 				29CBF2001C0303A700BE6A20 /* ALColorUtility.h */,
-				6D0877071D01B0F900DB491A /* UIView+ALToast.h */,
 				29CBF2011C0303A700BE6A20 /* ALColorUtility.m */,
 				6D6DF0A31BC5364C00EBA00F /* ALUtilityClass.h */,
 				6D6DF0A41BC5364C00EBA00F /* ALUtilityClass.m */,
-				6D0877091D01B0FE00DB491A /* UIView+ALToast.m */,
 				6D6DF0A51BC5364C00EBA00F /* UIImage+Utility.h */,
 				6D6DF0A61BC5364C00EBA00F /* UIImage+Utility.m */,
 				29C849A01CC932050042643C /* NSString+Encode.h */,
@@ -1627,7 +1627,6 @@
 				8B1635C42119C4B10008191A /* ApplozicClient.h in Headers */,
 				C75576EE1E27A5B300358D9B /* ALMuteRequest.h in Headers */,
 				29C849A21CC932050042643C /* NSString+Encode.h in Headers */,
-				6D0877081D01B0F900DB491A /* UIView+ALToast.h in Headers */,
 				6D6DF1501BC5364C00EBA00F /* ALRegisterUserClientService.h in Headers */,
 				1804732322C3FA640062CC52 /* ALMyContactMessageCell.h in Headers */,
 				1804732222C3FA640062CC52 /* ALContactMessageCell.h in Headers */,
@@ -1657,6 +1656,7 @@
 				6D6DF1481BC5364C00EBA00F /* ALRequestHandler.h in Headers */,
 				6D7756B11D5B80DF0025560B /* ALChannelFeed.h in Headers */,
 				6D7756711D5B7EEC0025560B /* ALChatLauncher.h in Headers */,
+				0953EBAA239F982800D67E52 /* UIView+Toast.h in Headers */,
 				6D77570E1D5B83660025560B /* ALPushAssist.h in Headers */,
 				6D7756A91D5B80DF0025560B /* ALChannel.h in Headers */,
 				6D7756F51D5B82B50025560B /* ALAppLocalNotifications.h in Headers */,
@@ -1946,7 +1946,6 @@
 				6D6DF17D1BC5364C00EBA00F /* ALSyncMessageFeed.m in Sources */,
 				181F69C322007B720018FC13 /* ALDocumentPickerHandler.m in Sources */,
 				6D7756AE1D5B80DF0025560B /* ALChannelCreateResponse.m in Sources */,
-				6D08770A1D01B0FE00DB491A /* UIView+ALToast.m in Sources */,
 				6D6DF1651BC5364C00EBA00F /* ALNewContactCell.m in Sources */,
 				6D7756BA1D5B80DF0025560B /* ALChannelUserX.m in Sources */,
 				6D6DF14D1BC5364C00EBA00F /* ALUserDefaultsHandler.m in Sources */,
@@ -2114,6 +2113,7 @@
 				6D6DF1551BC5364C00EBA00F /* UIImage+Utility.m in Sources */,
 				6D46B6C61BD025060014A5D3 /* ALMapViewController.m in Sources */,
 				18D29D732261111E009C4D39 /* ALUploadTask.m in Sources */,
+				0953EBAB239F982800D67E52 /* UIView+Toast.m in Sources */,
 				6DEAEE8D1D4CDBC700360060 /* ALUserProfileVC.m in Sources */,
 				6D6DF1531BC5364C00EBA00F /* ALUtilityClass.m in Sources */,
 				294637B71C6F16050025ED76 /* ALGroupCreationViewController.m in Sources */,

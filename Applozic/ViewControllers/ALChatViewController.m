@@ -5,7 +5,7 @@
 //
 //  Copyright (c) 2015 AppLozic. All rights reserved.
 //
-#import "UIView+ALToast.h"
+#import "UIView+Toast.h"
 #import <AVKit/AVKit.h>
 #import "ALChatViewController.h"
 #import "ALChatCell.h"
@@ -1254,10 +1254,12 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     
     [self.sendMessageTextView resignFirstResponder];
     [self.view makeToast:
-     NSLocalizedStringWithDefaultValue(@"syncMessagesInfo", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle],@"Syncing messages with the server,\n it might take few mins!"
-                                       , @"")  duration:1.0
-                position:CSToastPositionBottom
-                   title:nil];
+//     NSLocalizedStringWithDefaultValue(@"syncMessagesInfo", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle],@"Syncing messages with the server,\n it might take few mins!"
+//                                       , @"")  duration:1.0
+//                position:CSToastPositionBottom
+//                   title:nil];
+    [self.view makeToast:NSLocalizedStringWithDefaultValue(@"syncMessagesInfo", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle],@"Syncing messages with the server,\n it might take few mins!"
+                                                           , @"") duration:1.0 position:CSToastPositionCenter];
     
     //TODO: get the user name, devicekey String and make server call...
     [self.mActivityIndicator startAnimating];

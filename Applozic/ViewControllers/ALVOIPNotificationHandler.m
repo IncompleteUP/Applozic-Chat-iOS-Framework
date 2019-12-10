@@ -7,7 +7,7 @@
 //
 
 #import "ALVOIPNotificationHandler.h"
-#import "UIView+ALToast.h"
+#import "UIView+Toast.h"
 #import "ALContactService.h"
 #import "ALNotificationView.h"
 
