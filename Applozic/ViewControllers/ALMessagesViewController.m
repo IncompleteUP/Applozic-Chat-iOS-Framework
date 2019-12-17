@@ -425,7 +425,7 @@
         ALMessage * message = messagesArray[i];
         NSDictionary *metadata = message.metadata;
         if ([[metadata allKeys] containsObject:@"messageType"] && ([metadata[@"messageType"] integerValue] == 1 || [metadata[@"messageType"] integerValue] == 2)) {
-            [messagesArray removeObjectAtIndex:i];
+            [messagesArray removeObject:message];
         }
     }
     tempMessageArray = messagesArray;
