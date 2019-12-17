@@ -420,18 +420,23 @@
 {
     [self.mActivityIndicator stopAnimating];
     
-    if(messagesArray.count == 0)
-    {
-        [[self emptyConversationText] setHidden:NO];
+    NSMutableArray *tempMessageArray = [NSMutableArray array];
+    for (int i=0; i<messagesArray.count; i++) {
+        ALMessage * message = messagesArray[i];
+        if (message.metadata == nil) {
+            [tempMessageArray addObject:message];
+        }
     }
-    else
-    {
+    
+    if(tempMessageArray.count == 0){
+        [[self emptyConversationText] setHidden:NO];
+    }else{
         [[self emptyConversationText] setHidden:YES];
     }
     
-    self.mContactsMessageListArray = messagesArray;
-    for (int i=0; i<messagesArray.count; i++) {
-        ALMessage * message = messagesArray[i];
+    self.mContactsMessageListArray = tempMessageArray;
+    for (int i=0; i<tempMessageArray.count; i++) {
+        ALMessage * message = tempMessageArray[i];
         if(message.groupId != nil) {
             // It's a group message
         } else if (message.contactIds != nil)  {
@@ -440,6 +445,29 @@
     }
     [self.mTableView reloadData];
     ALSLog(ALLoggerSeverityInfo, @"GETTING MESSAGE ARRAY");
+    
+    
+    
+//    if(messagesArray.count == 0)
+//    {
+//        [[self emptyConversationText] setHidden:NO];
+//    }
+//    else
+//    {
+//        [[self emptyConversationText] setHidden:YES];
+//    }
+//
+//    self.mContactsMessageListArray = messagesArray;
+//    for (int i=0; i<messagesArray.count; i++) {
+//        ALMessage * message = messagesArray[i];
+//        if(message.groupId != nil) {
+//            // It's a group message
+//        } else if (message.contactIds != nil)  {
+//            // It's a normal one to one message
+//        }
+//    }
+//    [self.mTableView reloadData];
+//    ALSLog(ALLoggerSeverityInfo, @"GETTING MESSAGE ARRAY");
 }
 
 -(void)didUpdateBroadCastMessages {
