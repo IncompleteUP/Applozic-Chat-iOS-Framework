@@ -406,9 +406,9 @@
     
     ALChannelService * channelService = [ALChannelService new];
     NSNumber * channelUnreadCount = [channelService getOverallUnreadCountForChannel];
-    NSNumber * unreadCount = [NSNumber numberWithInt:channelUnreadCount];
+//    NSNumber * unreadCount = channelUnreadCount;
 
-    return unreadCount;
+    return channelUnreadCount;
 }
 
 -(void)resettingUnreadCountWithCompletion:(void (^)(NSString *json, NSError *error))completion
