@@ -423,11 +423,12 @@
     NSMutableArray *tempMessageArray = [NSMutableArray array];
     for (int i=0; i<messagesArray.count; i++) {
         ALMessage * message = messagesArray[i];
-        if (message.metadata == nil) {
-            [tempMessageArray addObject:message];
+        NSDictionary *metadata = message.metadata;
+        if ([[metadata allKeys] containsObject:@"messageType"] && ([metadata[@"messageType"] integerValue] == 1 || [metadata[@"messageType"] integerValue] == 2)) {
+            [messagesArray removeObjectAtIndex:i];
         }
     }
-    
+    tempMessageArray = messagesArray;
     if(tempMessageArray.count == 0){
         [[self emptyConversationText] setHidden:NO];
     }else{
