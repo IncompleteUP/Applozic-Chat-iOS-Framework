@@ -425,10 +425,11 @@
         ALMessage * message = messagesArray[i];
         NSDictionary *metadata = message.metadata;
         if ([[metadata allKeys] containsObject:@"messageType"] && ([metadata[@"messageType"] integerValue] == 1 || [metadata[@"messageType"] integerValue] == 2)) {
-            [messagesArray removeObject:message];
+            
+        }else{
+            [tempMessageArray addObject:message];
         }
     }
-    tempMessageArray = messagesArray;
     if(tempMessageArray.count == 0){
         [[self emptyConversationText] setHidden:NO];
     }else{
