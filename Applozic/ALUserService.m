@@ -394,14 +394,19 @@
 
 -(NSNumber *)getTotalUnreadCount
 {
-    ALContactService * contactService = [ALContactService new];
-    NSNumber * contactUnreadCount = [contactService getOverallUnreadCountForContact];
-
+//    ALContactService * contactService = [ALContactService new];
+//    NSNumber * contactUnreadCount = [contactService getOverallUnreadCountForContact];
+//
+//    ALChannelService * channelService = [ALChannelService new];
+//    NSNumber * channelUnreadCount = [channelService getOverallUnreadCountForChannel];
+//
+//    int totalCount = [contactUnreadCount intValue] + [channelUnreadCount intValue];
+//    ALContactService * contactService = [ALContactService new];
+//    NSNumber * contactUnreadCount = [contactService getOverallUnreadCountForContact];
+    
     ALChannelService * channelService = [ALChannelService new];
     NSNumber * channelUnreadCount = [channelService getOverallUnreadCountForChannel];
-
-    int totalCount = [contactUnreadCount intValue] + [channelUnreadCount intValue];
-    NSNumber * unreadCount = [NSNumber numberWithInt:totalCount];
+    NSNumber * unreadCount = [NSNumber numberWithInt:channelUnreadCount];
 
     return unreadCount;
 }
