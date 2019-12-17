@@ -328,6 +328,9 @@
     
     if(!pushAssistant.isOurViewOnTop)
     {
+        if (groupID == nil) {
+            return;
+        }
         self.chatLauncher = [[ALChatLauncher alloc] initWithApplicationId:APPLICATION_KEY];
         [self.chatLauncher launchIndividualChat:contactId withGroupId:groupID withConversationId:conversationId andViewControllerObject:pushAssistant.topViewController andWithText:nil];
     }
