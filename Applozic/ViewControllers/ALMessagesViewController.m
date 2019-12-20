@@ -424,7 +424,7 @@
     for (int i=0; i<messagesArray.count; i++) {
         ALMessage * message = messagesArray[i];
         NSDictionary *metadata = message.metadata;
-        if ([[metadata allKeys] containsObject:@"messageType"] && ([metadata[@"messageType"] integerValue] == 1 || [metadata[@"messageType"] integerValue] == 2) && (message.groupId == nil || [message.groupId stringValue].length == 0)) {
+        if (([[metadata allKeys] containsObject:@"messageType"] && ([metadata[@"messageType"] integerValue] == 1 || [metadata[@"messageType"] integerValue] == 2)) || (message.groupId == nil || [message.groupId stringValue].length == 0)) {
             
         }else{
             [tempMessageArray addObject:message];
