@@ -91,10 +91,17 @@ import UIKit
     private func setupNavigation() {
         self.navigationItem.title = NSLocalizedString("imagePreview", tableName: ALApplozicSettings.getLocalizableName(), bundle: Bundle.main, value: "Image Preview", comment: "")
 
+//        var backImage = UIImage.init(named: "icon_back", in: Bundle(for: ALChatViewController.self), compatibleWith: nil)
+//            backImage = backImage?.imageFlippedForRightToLeftLayoutDirection()
+//        self.navigationItem.leftBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.showShare(_:)))
+        
         var backImage = UIImage.init(named: "icon_back", in: Bundle(for: ALChatViewController.self), compatibleWith: nil)
+        if #available(iOS 9.0, *) {
             backImage = backImage?.imageFlippedForRightToLeftLayoutDirection()
-        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.showShare(_:)))
-
+        }
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: backImage, style: .plain, target: self , action: #selector(dismissAction(_:)))
+        
+        
     }
 
     override public func viewDidLoad() {
