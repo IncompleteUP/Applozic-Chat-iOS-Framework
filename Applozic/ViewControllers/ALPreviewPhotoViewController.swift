@@ -93,7 +93,7 @@ import UIKit
 
         var backImage = UIImage.init(named: "icon_back", in: Bundle(for: ALChatViewController.self), compatibleWith: nil)
             backImage = backImage?.imageFlippedForRightToLeftLayoutDirection()
-//        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.showShare(_:)))
+        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.showShare(_:)))
 
     }
 
