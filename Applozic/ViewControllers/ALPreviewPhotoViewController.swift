@@ -96,10 +96,14 @@ import UIKit
 //        self.navigationItem.leftBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.showShare(_:)))
         
         var backImage = UIImage.init(named: "icon_back", in: Bundle(for: ALChatViewController.self), compatibleWith: nil)
-        if #available(iOS 9.0, *) {
-            backImage = backImage?.imageFlippedForRightToLeftLayoutDirection()
-        }
+//        if #available(iOS 9.0, *) {
+//            backImage = backImage?.imageFlippedForRightToLeftLayoutDirection()
+//        }
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: backImage, style: .plain, target: self , action: #selector(dismissAction(_:)))
+        
+        
+//        let backBarItem = UIBarButtonItem(title: "back", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+//        self.navigationItem.setLeftBarButtonItem(backBarItem, animated: false)
         
         
     }
@@ -107,7 +111,7 @@ import UIKit
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-//        setupNavigation()
+        setupNavigation()
         scrollView.maximumZoomScale = 7.0
     }
 
