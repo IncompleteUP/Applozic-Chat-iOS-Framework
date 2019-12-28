@@ -107,7 +107,7 @@ import UIKit
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        setupNavigation()
+//        setupNavigation()
         scrollView.maximumZoomScale = 7.0
     }
 
