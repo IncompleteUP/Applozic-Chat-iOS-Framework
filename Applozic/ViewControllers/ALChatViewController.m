@@ -1264,7 +1264,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     
     //TODO: get the user name, devicekey String and make server call...
     [self.mActivityIndicator startAnimating];
-    [self fetchAndRefresh:YES];
+    [self fetchAndRefresh:NO];
     [self.mActivityIndicator stopAnimating];
 }
 
