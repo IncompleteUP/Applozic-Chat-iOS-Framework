@@ -1019,7 +1019,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
             if(!error){
                 
                 [self.navRightBarButtonItems removeObject:self.closeButton];
-                self.navigationItem.rightBarButtonItems = [self.navRightBarButtonItems mutableCopy];
+//                self.navigationItem.rightBarButtonItems = [self.navRightBarButtonItems mutableCopy];
                 [self freezeView:YES];
             }
         }];
@@ -2255,7 +2255,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
                                                   style:UIBarButtonItemStylePlain
                                                   target:self action:@selector(donePicking:)];
     
-    self.navigationItem.rightBarButtonItem = donePickerSelectionButton;
+//    self.navigationItem.rightBarButtonItem = donePickerSelectionButton;
 }
 
 -(void)setRightNavButtonToRefresh
@@ -2264,7 +2264,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
                                                                                    target:self
                                                                                    action:@selector(refreshTable:)];
     
-    self.navigationItem.rightBarButtonItem = refreshButton;
+//    self.navigationItem.rightBarButtonItem = refreshButton;
 }
 
 //==============================================================================================================================================
