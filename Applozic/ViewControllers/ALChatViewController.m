@@ -3299,6 +3299,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 
 -(void)fetchAndRefresh:(BOOL)flag
 {
+    return;
     NSString *deviceKeyString = [ALUserDefaultsHandler getDeviceKeyString];
     
     ALPushAssist * alpushAssist = [ALPushAssist new];
