@@ -150,24 +150,24 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
     self.navRightBarButtonItems = [NSMutableArray new];
     
 
-    if(![ALApplozicSettings isRefreshButtonHidden])
-    {
-        [self.navRightBarButtonItems addObject:refreshButton];
-    }
-    
-    if([ALApplozicSettings getCustomNavigationControllerClassName])
-    {
-       ALNavigationController * customnavController = (ALNavigationController*)self.navigationController;
-       
-       NSMutableArray * customButtons = [customnavController getCustomButtons];
-       
-       for(UIView* buttonView in customButtons)
-       {
-           UIBarButtonItem * barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonView];
-           [self.navRightBarButtonItems addObject:barButtonItem];
-       }
-       
-    }
+//    if(![ALApplozicSettings isRefreshButtonHidden])
+//    {
+//        [self.navRightBarButtonItems addObject:refreshButton];
+//    }
+//    
+//    if([ALApplozicSettings getCustomNavigationControllerClassName])
+//    {
+//       ALNavigationController * customnavController = (ALNavigationController*)self.navigationController;
+//       
+//       NSMutableArray * customButtons = [customnavController getCustomButtons];
+//       
+//       for(UIView* buttonView in customButtons)
+//       {
+//           UIBarButtonItem * barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonView];
+//           [self.navRightBarButtonItems addObject:barButtonItem];
+//       }
+//       
+//    }
     self.navigationItem.rightBarButtonItems = [self.navRightBarButtonItems mutableCopy];
     
     self.label = [[UILabel alloc] init];

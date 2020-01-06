@@ -1264,7 +1264,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     
     //TODO: get the user name, devicekey String and make server call...
     [self.mActivityIndicator startAnimating];
-    [self fetchAndRefresh:NO];
+    [self fetchAndRefresh:YES];
     [self.mActivityIndicator stopAnimating];
 }
 
@@ -2091,7 +2091,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     bottomRight.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - bottomLeft.frame.size.width) + 10, 58,
                                    [UIScreen mainScreen].bounds.size.width - bottomLeft.frame.size.width, 50);
     
-    [self setLabelViews:@[topLeft,bottomLeft,bottomRight] onView:view];
+    [self setLabelViews:@[topLeft,bottomLeft,topRight,bottomRight] onView:view];
     
     if(topicDetail.title != nil)
     {
@@ -2103,6 +2103,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
         view.transform = CGAffineTransformMakeScale(-1.0, 1.0);
         topLeft.transform = CGAffineTransformMakeScale(-1.0, 1.0);
         bottomLeft.transform = CGAffineTransformMakeScale(-1.0, 1.0);
+        topRight.transform = CGAffineTransformMakeScale(-1.0, 1.0);
         bottomRight.transform = CGAffineTransformMakeScale(-1.0, 1.0);
     }
     
@@ -2259,9 +2260,9 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 
 -(void)setRightNavButtonToRefresh
 {
-//    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-//                                                                                   target:self
-//                                                                                   action:@selector(refreshTable:)];
+    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                                                                   target:self
+                                                                                   action:@selector(refreshTable:)];
     
 //    self.navigationItem.rightBarButtonItem = refreshButton;
 }
@@ -3299,7 +3300,6 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 
 -(void)fetchAndRefresh:(BOOL)flag
 {
-    return;
     NSString *deviceKeyString = [ALUserDefaultsHandler getDeviceKeyString];
     
     ALPushAssist * alpushAssist = [ALPushAssist new];
